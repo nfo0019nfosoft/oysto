@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ABOUT US &#87211 OYSTO</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<link rel="stylesheet" href="css/contact.css">
+
+</head>
+
+<body>
+
+
+<header id="navbar">
+
+<div class="nav-container">
+
+<!-- LOGO -->
+
+<div class="logo">
+<a href="index.html">
+<img src="images/logo.png" alt="Company Logo">
+</a>
+</div>
+
+
+<!-- NAV LINKS -->
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About Us</a></li>
+
+
+<li class="dropdown">
+
+<a href="#">Products  ▾</a>
+
+<div class="dropdown-menu">
+
+<a href="#" class="dropdown-item">Sleek Series</a>
+
+<a href="#" class="dropdown-item">Eco Series 45</a>
+
+</div>
+
+</li>
+
+
+<li><a href="contact.html">Contact Us</a></li>
+
+</ul>
+
+
+<!-- MOBILE MENU -->
+
+<div class="menu-toggle">
+☰
+</div>
+
+
+</div>
+
+</header>
+
+
+
+
+
+<script>
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const navbar = document.getElementById("navbar");
+
+/* MOBILE MENU */
+
+menuToggle.addEventListener("click", () => {
+navLinks.classList.toggle("active");
+});
+
+/* MOBILE DROPDOWN */
+
+const dropdown = document.querySelector(".dropdown > a");
+const dropdownMenu = document.querySelector(".dropdown-menu");
+
+dropdown.addEventListener("click", function(e){
+
+if(window.innerWidth <= 768){
+e.preventDefault();
+dropdownMenu.classList.toggle("show");
+}
+
+});
+
+/* NAVBAR SCROLL EFFECT */
+
+window.addEventListener("scroll", () => {
+
+if(window.scrollY > 80){
+navbar.classList.add("navbar-scrolled");
+}else{
+navbar.classList.remove("navbar-scrolled");
+}
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="about-hero">
+<div class="overlay"></div>
+
+<div class="hero-content">
+<h1>CONTACT US</h1>
+<p>“Transform Your Office with the Right Partition Solutions.”</p>
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="contact-section">
+
+<div class="contact-wrapper">
+
+<!-- LEFT CARD -->
+
+<div class="contact-card scroll-card">
+
+<h2>Contact Us</h2>
+
+<div class="info">
+<i class="fa-solid fa-location-dot"></i>
+<p>
+2-4-337/338, Office No.1,<br>
+Vijaya Vishnu Residency,<br>
+Ramgopalpet, M.G Road,<br>
+Secunderabad - 03, TS, India
+</p>
+</div>
+
+<div class="info">
+<i class="fa-solid fa-phone"></i>
+<p>98483 90107<br>98852 71152</p>
+</div>
+
+<div class="info">
+<i class="fa-solid fa-envelope"></i>
+<p>
+info@oystopartitions.com<br>
+sales@oystopartitions.com
+</p>
+</div>
+
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=secunderabad&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+
+</div>
+
+
+<!-- RIGHT CARD -->
+
+<div class="contact-card scroll-card">
+
+<h2>Request Quote</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email Address">
+
+<input type="tel" placeholder="Phone Number">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button type="submit">
+<i class="fa-solid fa-rocket"></i> Send Inquiry
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+const cards = document.querySelectorAll(".scroll-card");
+
+function revealCards(){
+
+cards.forEach(card => {
+
+const windowHeight = window.innerHeight;
+const elementTop = card.getBoundingClientRect().top;
+
+if(elementTop < windowHeight - 100){
+card.classList.add("show");
+}
+
+});
+
+}
+
+window.addEventListener("scroll", revealCards);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- LOGO -->
+
+<div class="footer-box left-anim">
+
+<img src="images/logo2.png" class="footer-logo">
+
+<p>
+Premium office partitions and modular solutions
+for modern workplaces.
+</p>
+
+</div>
+
+
+<!-- PRODUCTS -->
+
+<div class="footer-box left-anim">
+
+<h2>Products</h2>
+
+<ul>
+<li>Sleek Series</li>
+<li>Eco Series 45</li>
+<li>Aluminium Partitions</li>
+<li>Sliding Glass Doors</li>
+<li>Frameless Glass</li>
+<li>Acoustic Partitions</li>
+<li>Demountable Walls</li>
+<li>Workstation Dividers</li>
+</ul>
+
+</div>
+
+
+<!-- QUICK LINKS -->
+
+<div class="footer-box right-anim">
+
+<h2>Quick Links</h2>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+</ul>
+
+</div>
+
+
+<!-- ADDRESS -->
+
+<div class="footer-box right-anim">
+
+<h2>Address</h2>
+
+<p><i class="fa-solid fa-location-dot"></i>  
+2-4-337/338, Office No.1<br>
+Vijaya Vishnu Residency<br>
+Ramgopalpet, M.G Road<br>
+Secunderabad - 03
+</p>
+
+<p><i class="fa-solid fa-phone"></i> 98483 90107</p>
+
+<p><i class="fa-solid fa-envelope"></i> info@oystopartitions.com</p>
+
+
+<div class="social">
+
+<i class="fa-brands fa-facebook-f"></i>
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-youtube"></i>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Oysto Partitions. All Rights Reserved |
+Designed by
+<a href="https://nfosoft.com" target="_blank">NFOSOFT</a>
+</p>
+
+</div>
+
+</footer>
+
+
+<script>
+    const left = document.querySelectorAll(".left-anim");
+const right = document.querySelectorAll(".right-anim");
+
+function revealFooter(){
+
+left.forEach(el=>{
+
+const pos = el.getBoundingClientRect().top;
+
+if(pos < window.innerHeight - 100){
+el.classList.add("show-left");
+}
+
+});
+
+right.forEach(el=>{
+
+const pos = el.getBoundingClientRect().top;
+
+if(pos < window.innerHeight - 100){
+el.classList.add("show-right");
+}
+
+});
+
+}
+
+window.addEventListener("scroll", revealFooter);
+</script>
