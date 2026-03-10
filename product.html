@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | Oysto</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<link rel="stylesheet" href="css/product.css">
+
+</head>
+
+<body>
+
+
+<header id="navbar">
+
+<div class="nav-container">
+
+<!-- LOGO -->
+
+<div class="logo">
+<a href="index.html">
+<img src="images/logo.png" alt="Company Logo">
+</a>
+</div>
+
+
+<!-- NAV LINKS -->
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About Us</a></li>
+
+
+<li class="dropdown">
+
+<a href="#">Products  ▾</a>
+
+<div class="dropdown-menu">
+
+<a href="sleek.html" class="dropdown-item">Sleek Series</a>
+
+<a href="eco.html" class="dropdown-item">Eco Series - 45</a>
+
+<a href="ultra.html" class="dropdown-item">Ultra Series - 75</a>
+
+<a href="neon.html" class="dropdown-item">Neon Series - 100</a>
+
+<a href="style.html" class="dropdown-item">Style Door</a>
+
+<a href="technical.html" class="dropdown-item">Technical Panel</a>
+
+<a href="architectural.html" class="dropdown-item">Architectural Hardware</a>
+
+<a href="accessories.html" class="dropdown-item">Accessories</a>
+
+</div>
+
+</li>
+
+
+<li><a href="contact.html">Contact Us</a></li>
+
+</ul>
+
+
+<!-- MOBILE MENU -->
+
+<div class="menu-toggle">
+☰
+</div>
+
+
+</div>
+
+</header>
+
+
+
+<script>
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const navbar = document.getElementById("navbar");
+
+/* MOBILE MENU */
+
+menuToggle.addEventListener("click", () => {
+navLinks.classList.toggle("active");
+});
+
+/* MOBILE DROPDOWN */
+
+const dropdown = document.querySelector(".dropdown > a");
+const dropdownMenu = document.querySelector(".dropdown-menu");
+
+dropdown.addEventListener("click", function(e){
+
+if(window.innerWidth <= 768){
+e.preventDefault();
+dropdownMenu.classList.toggle("show");
+}
+
+});
+
+/* NAVBAR SCROLL EFFECT */
+
+window.addEventListener("scroll", () => {
+
+if(window.scrollY > 80){
+navbar.classList.add("navbar-scrolled");
+}else{
+navbar.classList.remove("navbar-scrolled");
+}
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- HERO -->
+
+<section class="products-hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-text">
+<h1>Our Products</h1>
+<p>Premium Office Partition Solutions</p>
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="products-section">
+
+<h2 class="products-title">Our Product Range</h2>
+
+<div class="products-grid">
+
+<div class="product-box reveal">
+<img src="https://images.unsplash.com/photo-1497366216548-37526070297c">
+<div class="product-overlay">
+<h3>Sleek Series</h3>
+<p>Elegant glass partition systems for modern workspaces.</p>
+<a href="#" class="product-btn">View Product</a>
+</div>
+</div>
+
+<div class="product-box reveal">
+<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2">
+<div class="product-overlay">
+<h3>Eco Series - 45</h3>
+<p>Cost-efficient modular partitions for flexible office layouts.</p>
+<a href="#" class="product-btn">View Product</a>
+</div>
+</div>
+
+<div class="product-box reveal">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<div class="product-overlay">
+<h3>Ultra Series - 75</h3>
+<p>High performance acoustic partition system.</p>
+<a href="#" class="product-btn">View Product</a>
+</div>
+</div>
+
+<div class="product-box reveal">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
+<div class="product-overlay">
+<h3>Neon Series - 100</h3>
+<p>Premium office partition solution for large offices.</p>
+<a href="#" class="product-btn">View Product</a>
+</div>
+</div>
+
+<div class="product-box reveal">
+<img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36">
+<div class="product-overlay">
+<h3>Style Door</h3>
+<p>Stylish glass doors designed for partitions.</p>
+<a href="#" class="product-btn">View Product</a>
+</div>
+</div>
+
+<div class="product-box reveal">
+<img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f">
+<div class="product-overlay">
+<h3>Technical Panel</h3>
+<p>Advanced panels for modern office environments.</p>
+<a href="#" class="product-btn">View Product</a>
+</div>
+</div>
+
+<div class="product-box reveal">
+<img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58">
+<div class="product-overlay">
+<h3>Architectural Hardware</h3>
+<p>Premium quality fittings for partitions.</p>
+<a href="#" class="product-btn">View Product</a>
+</div>
+</div>
+
+<div class="product-box reveal">
+<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+<div class="product-overlay">
+<h3>Accessories</h3>
+<p>Essential accessories for complete partition systems.</p>
+<a href="#" class="product-btn">View Product</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- <script>
+    const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+
+reveals.forEach(el => {
+
+const pos = el.getBoundingClientRect().top;
+
+if(pos < window.innerHeight - 100){
+el.classList.add("active");
+}
+
+});
+
+});
+</script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="products-panels">
+
+<h2 class="products-title">Our Products</h2>
+
+<div class="panel-container">
+
+<div class="panel reveal">
+<img src="https://images.unsplash.com/photo-1497366216548-37526070297c">
+<div class="panel-info">
+<h3>Sleek Series</h3>
+<p>Elegant glass partition systems for modern offices.</p>
+<a href="#">View Product</a>
+</div>
+</div>
+
+<div class="panel reveal">
+<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2">
+<div class="panel-info">
+<h3>Eco Series - 45</h3>
+<p>Cost-efficient modular partitions for flexible workspaces.</p>
+<a href="#">View Product</a>
+</div>
+</div>
+
+<div class="panel reveal">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<div class="panel-info">
+<h3>Ultra Series - 75</h3>
+<p>Acoustic partition system for privacy and performance.</p>
+<a href="#">View Product</a>
+</div>
+</div>
+
+<div class="panel reveal">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
+<div class="panel-info">
+<h3>Neon Series - 100</h3>
+<p>Heavy-duty partitions for large corporate offices.</p>
+<a href="#">View Product</a>
+</div>
+</div>
+
+<div class="panel reveal">
+<img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36">
+<div class="panel-info">
+<h3>Style Door</h3>
+<p>Stylish doors designed for glass partition systems.</p>
+<a href="#">View Product</a>
+</div>
+</div>
+
+<div class="panel reveal">
+<img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f">
+<div class="panel-info">
+<h3>Technical Panel</h3>
+<p>Advanced panels engineered for modern workspaces.</p>
+<a href="#">View Product</a>
+</div>
+</div>
+
+<div class="panel reveal">
+<img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58">
+<div class="panel-info">
+<h3>Architectural Hardware</h3>
+<p>Premium fittings for glass partition installations.</p>
+<a href="#">View Product</a>
+</div>
+</div>
+
+<div class="panel reveal">
+<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+<div class="panel-info">
+<h3>Accessories</h3>
+<p>Essential accessories for modular partition systems.</p>
+<a href="#">View Product</a>
+</div>
+</div>
+
+</div>
+</section>
+<script>
+    const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach(el=>{
+    const pos = el.getBoundingClientRect().top;
+    if(pos < window.innerHeight - 100){
+      el.classList.add("active");
+    }
+  });
+});
+</script>

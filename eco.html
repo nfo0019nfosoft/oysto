@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eco Series - 45
+     | Oysto</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<link rel="stylesheet" href="css/eco.css">
+
+</head>
+
+<body>
+
+
+<header id="navbar">
+
+<div class="nav-container">
+
+<!-- LOGO -->
+
+<div class="logo">
+<a href="index.html">
+<img src="images/logo.png" alt="Company Logo">
+</a>
+</div>
+
+
+<!-- NAV LINKS -->
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About Us</a></li>
+
+
+<li class="dropdown">
+
+<a href="#">Products  ▾</a>
+
+<div class="dropdown-menu">
+
+<a href="sleek.html" class="dropdown-item">Sleek Series</a>
+
+<a href="eco.html" class="dropdown-item">Eco Series - 45</a>
+
+<a href="ultra.html" class="dropdown-item">Ultra Series - 75</a>
+
+<a href="neon.html" class="dropdown-item">Neon Series - 100</a>
+
+<a href="style.html" class="dropdown-item">Style Door</a>
+
+<a href="technical.html" class="dropdown-item">Technical Panel</a>
+
+<a href="architectural.html" class="dropdown-item">Architectural Hardware</a>
+
+<a href="accessories.html" class="dropdown-item">Accessories</a>
+
+</div>
+
+</li>
+
+
+<li><a href="contact.html">Contact Us</a></li>
+
+</ul>
+
+
+<!-- MOBILE MENU -->
+
+<div class="menu-toggle">
+☰
+</div>
+
+
+</div>
+
+</header>
+
+
+
+<script>
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const navbar = document.getElementById("navbar");
+
+/* MOBILE MENU */
+
+menuToggle.addEventListener("click", () => {
+navLinks.classList.toggle("active");
+});
+
+/* MOBILE DROPDOWN */
+
+const dropdown = document.querySelector(".dropdown > a");
+const dropdownMenu = document.querySelector(".dropdown-menu");
+
+dropdown.addEventListener("click", function(e){
+
+if(window.innerWidth <= 768){
+e.preventDefault();
+dropdownMenu.classList.toggle("show");
+}
+
+});
+
+/* NAVBAR SCROLL EFFECT */
+
+window.addEventListener("scroll", () => {
+
+if(window.scrollY > 80){
+navbar.classList.add("navbar-scrolled");
+}else{
+navbar.classList.remove("navbar-scrolled");
+}
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+<!-- HERO -->
+
+<section class="products-hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-text">
+<h1>Eco Series - 45</h1>
+<p>“Eco Series – 45 — Efficient partition systems designed for flexible and modern office environments.”</p>
+</div>
+
+</section>
+
+
+
+
+
+<section class="premium-sleek">
+  <div class="glass-bg-text">OYSTO</div>
+  
+  <div class="sleek-wrapper">
+    <div class="image-grid reveal-left">
+      <div class="main-frame">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c" alt="Main Office" class="img-zoom">
+      </div>
+      <div class="side-images">
+        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2" alt="Detail 1">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72" alt="Detail 2">
+      </div>
+    </div>
+
+    <div class="content-panel reveal-right">
+      <span class="subtitle">MODULAR SYSTEMS</span>
+      <h2 class="title">Sleek <span class="thin">Series</span></h2>
+      
+      <p class="description">
+        OYSTO Sleek Series modular aluminum single glaze partition system offers
+        a seamless look and lays more emphasis on the glass. It is recyclable and
+        lightweight, featuring a ultra-slim 25mm profile.
+      </p>
+
+      <ul class="feature-list">
+        <li><span>Profile:</span> 25mm x 25mm</li>
+        <li><span>Finishes:</span> Silver / Black / Anodised</li>
+        <li><span>Glass:</span> 10 / 12mm / 11.5mm Laminated</li>
+        <li><span>Acoustics:</span> 32 dB Insulation</li>
+        <li><span>Height:</span> Up to 3000mm</li>
+      </ul>
+
+      <div class="action-area">
+        <a href="#" class="btn-premium">
+          <span>Request Quote</span>
+          <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const reveals = document.querySelectorAll(".reveal-left, .reveal-right");
+
+    const revealOptions = {
+        threshold: 0.15, // 15% section kanipiste animation start avtundi
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            
+            // Add show class
+            entry.target.classList.add(entry.target.classList.contains('reveal-left') ? 'show-left' : 'show-right');
+            
+            // Okasari reveal ayyaka observation stop chestundi (performance)
+            observer.unobserve(entry.target);
+        });
+    }, revealOptions);
+
+    reveals.forEach(el => {
+        revealObserver.observe(el);
+    });
+});
+</script>
