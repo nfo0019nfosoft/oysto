@@ -153,47 +153,69 @@ cursor:pointer;
 }
 
 /* MOBILE */
+@media (max-width:768px) {
+    /* 1. Mobile Menu Background Fix */
+    .nav-links {
+        position: absolute;
+        top: 100%; /* Navbar height ki sync avtundi */
+        left: 0;
+        width: 100%;
+        /* Ee kinda line transparent petti chudandi overlay kavali ante, 
+           leda hero text kanipinchali ante background: rgba(0,0,0,0.8) petti text white cheyandi */
+        background: white; 
+        flex-direction: column;
+        align-items: flex-start; /* Left align chesthe layout move avvadu */
+        gap: 0px; /* Spacing padding tho control chedam */
+        padding: 0; 
+        display: none;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
 
-@media (max-width:768px){
+    /* Menu links spacing and alignment */
+    .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
 
-.nav-links{
-position:absolute;
-top:70px;
-left:0;
-width:100%;
-background:white;
-flex-direction:column;
-align-items:center;
-gap:20px;
-padding:25px;
-display:none;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    .nav-links li a {
+        display: block;
+        padding: 15px 25px;
+        color: black !important; /* Mobile menu lo text kachitanga kanipinchali */
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Hero section meeda toggle kanipinchali ante color white pettali */
+        color: white; 
+    }
+    
+    /* 2. Dropdown Fix - Position move avvakunda */
+    .dropdown-menu {
+        position: static; /* Flow lo untundi */
+        width: 100%;
+        background: #f9f9f9; /* Koncham different shade for dropdown */
+        box-shadow: none;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        display: none;
+        padding: 0 0 0 20px; /* Koncham lopalki jarugutundi */
+    }
+
+    .dropdown-menu.show {
+        display: flex;
+    }
+    
+    .dropdown-item {
+        border-bottom: none !important;
+        padding: 12px 25px !important;
+    }
 }
-
-.nav-links.active{
-display:flex;
-}
-
-.menu-toggle{
-display:block;
-}
-
-.dropdown-menu{
-position:static;
-box-shadow:none;
-background:white;
-transform:none;
-opacity:1;
-pointer-events:auto;
-display:none;
-}
-
-.dropdown-menu.show{
-display:flex;
-}
-
-}
-
 
 
 
