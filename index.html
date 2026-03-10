@@ -237,7 +237,7 @@ aboutSection.classList.add("show");
 
 <!-- PRODUCT -->
 
-<div class="product-card left">
+<div class="product-card ">
 
 <div class="img-box">
 
@@ -261,7 +261,7 @@ aboutSection.classList.add("show");
 </div>
 
 
-<div class="product-card left">
+<div class="product-card ">
 
 <div class="img-box">
 
@@ -285,7 +285,7 @@ aboutSection.classList.add("show");
 </div>
 
 
-<div class="product-card left">
+<div class="product-card ">
 
 <div class="img-box">
 
@@ -309,7 +309,7 @@ aboutSection.classList.add("show");
 </div>
 
 
-<div class="product-card left">
+<div class="product-card ">
 
 <div class="img-box">
 
@@ -333,7 +333,7 @@ aboutSection.classList.add("show");
 </div>
 
 
-<div class="product-card right">
+<div class="product-card ">
 
 <div class="img-box">
 
@@ -357,7 +357,7 @@ aboutSection.classList.add("show");
 </div>
 
 
-<div class="product-card right">
+<div class="product-card ">
 
 <div class="img-box">
 
@@ -381,7 +381,7 @@ aboutSection.classList.add("show");
 </div>
 
 
-<div class="product-card right">
+<div class="product-card ">
 
 <div class="img-box">
 
@@ -405,7 +405,7 @@ aboutSection.classList.add("show");
 </div>
 
 
-<div class="product-card right">
+<div class="product-card ">
 
 <div class="img-box">
 
@@ -434,44 +434,30 @@ aboutSection.classList.add("show");
 
 </section>
 
-
 <script>
 
-const products = document.querySelector(".products-section");
+const section = document.querySelector(".products-section");
 
-window.addEventListener("scroll", () => {
+const observer = new IntersectionObserver((entries)=>{
 
-const top = products.getBoundingClientRect().top;
+entries.forEach(entry => {
 
-if(top < window.innerHeight - 100){
-products.classList.add("show");
+if(entry.isIntersecting){
+section.classList.add("show");
 }
 
 });
+
+},{
+threshold:0.3
+});
+
+observer.observe(section);
 
 </script>
 
 
 
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Glass Partition Process</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-</head>
-
-<body>
 
 <section class="process-section">
 
@@ -554,10 +540,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 </section>
 
-
 <script>
-
-const items=document.querySelectorAll(".process-item")
+  const items=document.querySelectorAll(".process-item")
 
 window.addEventListener("scroll",()=>{
 
@@ -572,12 +556,7 @@ item.classList.add("show")
 })
 
 })
-
 </script>
-
-</body>
-</html>
-
 
 
 
@@ -634,26 +613,27 @@ item.classList.add("show")
 </div>
 
 </section>
-
-
 <script>
 
 const highlights = document.querySelector(".highlights-section");
 
-window.addEventListener("scroll", () => {
+const highlightsObserver = new IntersectionObserver((entries) => {
 
-const top = highlights.getBoundingClientRect().top;
+entries.forEach(entry => {
 
-if(top < window.innerHeight - 100){
+if(entry.isIntersecting){
 highlights.classList.add("show-highlights");
 }
 
 });
 
+},{
+threshold:0.3
+});
+
+highlightsObserver.observe(highlights);
+
 </script>
-
-
-
 
 
 
@@ -1015,8 +995,8 @@ Secunderabad - 03
 
 <p>
 © 2026 Oysto Partitions. All Rights Reserved |
-Designed by
-<a href="https://nfosoft.com" target="_blank">NFOSOFT</a>
+Designed by Developed by
+<a href="https://nfosoft.com" target="_blank">nfosoft Innovations</a>
 </p>
 
 </div>

@@ -90,33 +90,38 @@ width:100%;
 .dropdown{
 position:relative;
 }
-
 .dropdown-menu{
 position:absolute;
 top:100%;
 left:0;
-width:220px;
-padding:15px;
-border-radius:12px;
+
+width:260px;   /* increase width */
+padding:18px;
+min-height:420px;
+left:-20px;
+border-radius:14px;
+
 display:flex;
 flex-direction:column;
-gap:5px;
+gap:8px;
 
 opacity:0;
 transform:translateY(10px);
 pointer-events:none;
 transition:0.35s;
 
+/* IMAGE BACKGROUND */
+
 background:
-linear-gradient(rgba(255,255,255,0.9), rgba(0,0,0,0.1)),
+linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
 url("https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg");
 
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
 
 box-shadow:0 15px 35px rgba(0,0,0,0.15);
 }
-
 /* SHOW DROPDOWN */
 
 .dropdown:hover .dropdown-menu{
@@ -160,24 +165,36 @@ cursor:pointer;
 }
 
 /* MOBILE */
+
 @media (max-width:768px){
 
+
+
+/* NAV CONTAINER */
+
 .nav-container{
+width:100%;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:12px 14px;
+padding:12px 16px;
 }
+
+/* LOGO */
 
 .logo img{
 height:45px;
 }
+
+/* MENU ICON */
 
 .menu-toggle{
 display:block;
 font-size:26px;
 cursor:pointer;
 }
+
+/* NAV LINKS */
 
 .nav-links{
 position:absolute;
@@ -186,35 +203,39 @@ left:0;
 width:100%;
 background:white;
 flex-direction:column;
-align-items:center;
-gap:20px;
-padding:25px;
+align-items:flex-start;
+gap:18px;
+padding:20px;
 display:none;
 box-shadow:0 10px 20px rgba(0,0,0,0.1);
 }
+
+/* ACTIVE MENU */
 
 .nav-links.active{
 display:flex;
 }
 
+/* NAV LINK STYLE */
+
+.nav-links a{
+color:black !important;
+font-size:16px;
+width:100%;
+}
+
+/* DROPDOWN */
+
 .dropdown-menu{
-
 position:static;
-
 background:#ffffff;
-
 box-shadow:none;
-
 opacity:1;
 transform:none;
-
 pointer-events:auto;
-
 display:none;
-
 width:100%;
-
-padding:10px 0;
+padding-left:15px;
 }
 
 /* SHOW DROPDOWN */
@@ -222,7 +243,7 @@ padding:10px 0;
 .dropdown-menu.show{
 display:flex;
 flex-direction:column;
-align-items:center;
+align-items:flex-start;
 }
 
 /* DROPDOWN LINKS */
@@ -230,12 +251,11 @@ align-items:center;
 .dropdown-item{
 color:#333 !important;
 font-size:15px;
-padding:10px;
+padding:10px 0;
 width:100%;
-text-align:center;
 }
 
-/* REMOVE HOVER EFFECT MOBILE */
+/* REMOVE DESKTOP HOVER */
 
 .dropdown:hover .dropdown-menu{
 opacity:1;
@@ -244,6 +264,7 @@ pointer-events:auto;
 }
 
 }
+
 
 
 
