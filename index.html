@@ -459,104 +459,126 @@ observer.observe(section);
 
 
 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Architectural Flow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
 <section class="process-section">
+    <div class="bg-image"></div>
+    <div class="container">
+        <div class="section-header">
+            <h2><span>OUR METHODOLOGY</span></h2>
+        </div>
 
-<h2 class="process-title">Smart Glass Partition Installation Process</h2>
+        <div class="process-flow">
+            <div class="step-active-trigger">
+                <div class="process-card">
+                    <span class="bg-num">01</span>
+                    <div class="step-icon"><i class="fa-solid fa-comment-dots"></i></div>
+                    <div class="text-content">
+                        <h3>Workspace Consultation</h3>
+                        <p>Analyzing spatial requirements and architectural goals for your workspace.</p>
+                    </div>
+                </div>
+            </div>
 
-<div class="process-container">
+            <div class="step-active-trigger">
+                <div class="process-card">
+                    <span class="bg-num">02</span>
+                    <div class="step-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <div class="text-content">
+                        <h3>Concept & Layout</h3>
+                        <p>Developing digital blueprints that redefine modern office aesthetics.</p>
+                    </div>
+                </div>
+            </div>
 
-<div class="process-item">
+            <div class="step-active-trigger">
+                <div class="process-card">
+                    <span class="bg-num">03</span>
+                    <div class="step-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+                    <div class="text-content">
+                        <h3>Site Measurement</h3>
+                        <p>Precision on-site scanning to ensure a flawless structural fit.</p>
+                    </div>
+                </div>
+            </div>
 
-<div class="process-number">1</div>
+            <div class="step-active-trigger">
+                <div class="process-card">
+                    <span class="bg-num">04</span>
+                    <div class="step-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="text-content">
+                        <h3>Precision Production</h3>
+                        <p>Manufacturing high-durability tempered glass panels.</p>
+                    </div>
+                </div>
+            </div>
 
-<div class="process-card">
-<h3><i class="fa-solid fa-users"></i> Workspace Consultation</h3>
-<p>Understanding your office layout, functional needs, and architectural design vision.</p>
-</div>
+            <div class="step-active-trigger">
+                <div class="process-card">
+                    <span class="bg-num">05</span>
+                    <div class="step-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <div class="text-content">
+                        <h3>Expert Installation</h3>
+                        <p>Professional setup with high focus on safety and alignment.</p>
+                    </div>
+                </div>
+            </div>
 
-</div>
-
-
-<div class="process-item">
-
-<div class="process-number">2</div>
-
-<div class="process-card">
-<h3><i class="fa-solid fa-pen-ruler"></i> Concept & Layout Design</h3>
-<p>Designing customized glass partition layouts that match modern workspace aesthetics.</p>
-</div>
-
-</div>
-
-
-<div class="process-item">
-
-<div class="process-number">3</div>
-
-<div class="process-card">
-<h3><i class="fa-solid fa-building"></i> Site Measurement</h3>
-<p>Detailed on-site measurements to ensure precision installation and structural balance.</p>
-</div>
-
-</div>
-
-
-<div class="process-item">
-
-<div class="process-number">4</div>
-
-<div class="process-card">
-<h3><i class="fa-solid fa-microchip"></i> Glass Panel Production</h3>
-<p>Manufacturing premium tempered glass panels with precision engineering.</p>
-</div>
-
-</div>
-
-
-<div class="process-item">
-
-<div class="process-number">5</div>
-
-<div class="process-card">
-<h3><i class="fa-solid fa-screwdriver-wrench"></i> Professional Installation</h3>
-<p>Expert installation ensuring durability, safety, and seamless partition alignment.</p>
-</div>
-
-</div>
-
-
-<div class="process-item">
-
-<div class="process-number">6</div>
-
-<div class="process-card">
-<h3><i class="fa-solid fa-handshake"></i> Final Handover & Support</h3>
-<p>Complete project delivery with final inspection and client satisfaction assurance.</p>
-</div>
-
-</div>
-
-</div>
-
+            <div class="step-active-trigger">
+                <div class="process-card">
+                    <span class="bg-num">06</span>
+                    <div class="step-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                    <div class="text-content">
+                        <h3>Handover & Support</h3>
+                        <p>Final quality audit and project delivery with assurance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <script>
-  const items=document.querySelectorAll(".process-item")
+    document.addEventListener("DOMContentLoaded", () => {
+        // Changed selector to match new trigger class
+        const flowSteps = document.querySelectorAll('.step-active-trigger');
 
-window.addEventListener("scroll",()=>{
+        const flowObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Adding 'animated' class to trigger CSS animations
+                    entry.target.classList.add('animated');
+                    flowObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.25 });
 
-items.forEach(item=>{
-
-const top=item.getBoundingClientRect().top
-
-if(top < window.innerHeight-100){
-item.classList.add("show")
-}
-
-})
-
-})
+        flowSteps.forEach(step => flowObserver.observe(step));
+    });
 </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
 
 
 
