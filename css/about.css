@@ -118,21 +118,24 @@ transform:translateY(0);
 pointer-events:auto;
 }
 
-.dropdown-item{
-display:block;
-text-decoration:none;
-color:black;
-font-size:16px;
-padding:10px 15px;
-border-radius:6px;
-font-weight:500;
-transition:0.3s;
+/* Dropdown Item base style */
+.dropdown-item {
+    display: block;
+    text-decoration: none;
+    color: black !important; /* Force black initially */
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: 0.3s;
 }
 
-.dropdown-item:hover{
-background:#057fcc;
-color:white;
+/* Hover state fix */
+.dropdown-menu .dropdown-item:hover {
+    background: #057fcc;
+    color: white !important; /* Hover chesinappudu white avvali */
 }
+
 
 .dropdown-menu.show{
 opacity:1;
@@ -297,7 +300,7 @@ font-size:14px;
 
 
 .about-section{
-padding:60px 5%;
+padding:50px 5%;
 background:#eef6fb;
 overflow:hidden;
 }
@@ -445,26 +448,28 @@ margin:auto;
 
 
 .abou-section{
-padding:80px 5%;
+padding:40px 5%;
 text-align:center;
-background:#f7f9fc;
+background:white;
 font-family:Arial, Helvetica, sans-serif;
 }
 
 /* CENTER CONTAINER */
-
 .abou-container{
 max-width:900px;
 margin:auto;
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
 }
-
 /* HEADING */
 
 .abou-heading h2{
 font-size:38px;
 color:#057fcc;
 text-transform:uppercase;
-margin-bottom:12px;
+margin-bottom:16px;
 }
 
 /* CONTENT */
@@ -526,8 +531,8 @@ font-size:15px;
 
 
 .values-section{
-padding:90px 5%;
-background:#f4f7fb;
+padding:50px 5%;
+background:#eef6fb;
 text-align:center;
 font-family:Arial, Helvetica, sans-serif;
 }
@@ -676,8 +681,8 @@ font-size:28px;
 
 
 .experience-section{
-padding:90px 5%;
-background:#f8f9fc;
+padding:50px 5%;
+background:white;
 text-align:center;
 font-family:Arial, Helvetica, sans-serif;
 }
@@ -714,11 +719,12 @@ gap:30px;
 /* CARD */
 
 .exp-card{
-background:white;
+background: #eef6fb;
 padding:35px 25px;
 border-radius:14px;
 transition:0.4s;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
+text-align: justify;
 position:relative;
 overflow:hidden;
 }
@@ -761,9 +767,10 @@ font-size:20px;
 }
 
 .exp-card p{
-color:#555;
+color:black;
+text-align: justify;
 line-height:1.6;
-font-size:15px;
+font-size:14px;
 }
 
 /* SCROLL ANIMATION */

@@ -111,34 +111,39 @@ box-shadow:0 15px 35px rgba(0,0,0,0.15);
 }
 
 /* SHOW DROPDOWN */
+
 .dropdown:hover .dropdown-menu{
-  opacity:1;
-  transform:translateY(0);
-  pointer-events:auto;
+opacity:1;
+transform:translateY(0);
+pointer-events:auto;
 }
 
-.dropdown-item{
-  display:block;
-  text-decoration:none;
-  color:black;
-  font-size:16px;
-  padding:10px 15px;
-  border-radius:6px;
-  font-weight:500;
-  transition:0.3s;
+/* Dropdown Item base style */
+.dropdown-item {
+    display: block;
+    text-decoration: none;
+    color: black !important; /* Force black initially */
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: 0.3s;
 }
 
-.dropdown-item:hover{
-  background:#057fcc;
-  color:white;
+/* Hover state fix */
+.dropdown-menu .dropdown-item:hover {
+    background: #057fcc;
+    color: white !important; /* Hover chesinappudu white avvali */
 }
+
 
 .dropdown-menu.show{
-  opacity:1;
-  transform:translateY(0);
-  pointer-events:auto;
-  display:flex;
+opacity:1;
+transform:translateY(0);
+pointer-events:auto;
+display:flex;
 }
+
 /* MOBILE MENU */
 
 .menu-toggle{
@@ -188,7 +193,6 @@ display:flex;
 }
 
 }
-
 
 
 

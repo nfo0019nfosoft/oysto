@@ -131,23 +131,23 @@ opacity:1;
 transform:translateY(0);
 pointer-events:auto;
 }
-
-.dropdown-item{
-display:block;
-text-decoration:none;
-color:black;
-font-size:16px;
-padding:10px 15px;
-border-radius:6px;
-font-weight:500;
-transition:0.3s;
+/* Dropdown Item base style */
+.dropdown-item {
+    display: block;
+    text-decoration: none;
+    color: black !important; /* Force black initially */
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: 0.3s;
 }
 
-.dropdown-item:hover{
-background:#057fcc;
-color:white;
+/* Hover state fix */
+.dropdown-menu .dropdown-item:hover {
+    background: #057fcc;
+    color: white !important; /* Hover chesinappudu white avvali */
 }
-
 /* MOBILE MENU */
 
 .menu-toggle{
