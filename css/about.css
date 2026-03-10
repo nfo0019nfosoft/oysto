@@ -90,29 +90,35 @@ width:100%;
 .dropdown{
 position:relative;
 }
-
 .dropdown-menu{
 position:absolute;
 top:100%;
 left:0;
-width:220px;
-padding:15px;
-border-radius:12px;
+
+width:260px;   /* increase width */
+padding:18px;
+min-height:420px;
+left:-20px;
+border-radius:14px;
+
 display:flex;
 flex-direction:column;
-gap:5px;
+gap:8px;
 
 opacity:0;
 transform:translateY(10px);
 pointer-events:none;
 transition:0.35s;
 
+/* IMAGE BACKGROUND */
+
 background:
-linear-gradient(rgba(255,255,255,0.9), rgba(0,0,0,0.1)),
+linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
 url("https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg");
 
-background-size:cover;
+background-size:contain;
 background-position:center;
+background-repeat:no-repeat;
 
 box-shadow:0 15px 35px rgba(0,0,0,0.15);
 }
