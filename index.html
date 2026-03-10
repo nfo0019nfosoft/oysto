@@ -47,9 +47,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <div class="dropdown-menu">
 
-<a href="sleek.html" class="dropdown-item">Sleek Series</a>
+<a href="sleekeries.html" class="dropdown-item">Sleek Series</a>
 
-<a href="eco.html" class="dropdown-item">Eco Series - 45</a>
+<a href="ecoseries-45.html" class="dropdown-item">Eco Series - 45</a>
 
 <a href="ultra.html" class="dropdown-item">Ultra Series - 75</a>
 
@@ -455,59 +455,128 @@ products.classList.add("show");
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Glass Partition Process</title>
 
+<link rel="stylesheet" href="style.css">
 
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+</head>
+
+<body>
 
 <section class="process-section">
-  <h2 class="process-title">Seamless Installation & Customization</h2>
-  
-  <div class="process-container">
-    <div class="process-row">
-      <div class="step"><div class="circle"><i class="fa-solid fa-users"></i></div><p>Consultation</p></div>
-      <div class="step"><div class="circle"><i class="fa-solid fa-file-pen"></i></div><p>Conceptualization</p></div>
-      <div class="step"><div class="circle"><i class="fa-solid fa-compass-drafting"></i></div><p>Planning & Budgeting</p></div>
-      <div class="step anchor-step"><div class="circle"><i class="fa-solid fa-building-user"></i></div><p>Site Inspection</p></div>
-    </div>
 
-    <div class="process-row reverse">
-      <div class="step"><div class="circle"><i class="fa-solid fa-handshake"></i></div><p>Handover & Feedback</p></div>
-      <div class="step"><div class="circle"><i class="fa-solid fa-screwdriver-wrench"></i></div><p>System Installation</p></div>
-      <div class="step"><div class="circle"><i class="fa-solid fa-microchip"></i></div><p>Material Production</p></div>
-      <div class="step"><div class="circle"><i class="fa-solid fa-clipboard-check"></i></div><p>Project Finalization</p></div>
-    </div>
-  </div>
+<h2 class="process-title">Smart Glass Partition Installation Process</h2>
+
+<div class="process-container">
+
+<div class="process-item">
+
+<div class="process-number">1</div>
+
+<div class="process-card">
+<h3><i class="fa-solid fa-users"></i> Workspace Consultation</h3>
+<p>Understanding your office layout, functional needs, and architectural design vision.</p>
+</div>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-number">2</div>
+
+<div class="process-card">
+<h3><i class="fa-solid fa-pen-ruler"></i> Concept & Layout Design</h3>
+<p>Designing customized glass partition layouts that match modern workspace aesthetics.</p>
+</div>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-number">3</div>
+
+<div class="process-card">
+<h3><i class="fa-solid fa-building"></i> Site Measurement</h3>
+<p>Detailed on-site measurements to ensure precision installation and structural balance.</p>
+</div>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-number">4</div>
+
+<div class="process-card">
+<h3><i class="fa-solid fa-microchip"></i> Glass Panel Production</h3>
+<p>Manufacturing premium tempered glass panels with precision engineering.</p>
+</div>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-number">5</div>
+
+<div class="process-card">
+<h3><i class="fa-solid fa-screwdriver-wrench"></i> Professional Installation</h3>
+<p>Expert installation ensuring durability, safety, and seamless partition alignment.</p>
+</div>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-number">6</div>
+
+<div class="process-card">
+<h3><i class="fa-solid fa-handshake"></i> Final Handover & Support</h3>
+<p>Complete project delivery with final inspection and client satisfaction assurance.</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
+
+
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-  const steps = document.querySelectorAll(".step");
 
-  const revealOnScroll = () => {
-    steps.forEach((step, index) => {
-      const rect = step.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 50) {
-        // Delay adds a nice sequence effect
-        setTimeout(() => {
-          step.classList.add("show");
-        }, index * 100);
-      }
-    });
-  };
+const items=document.querySelectorAll(".process-item")
 
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll(); // Run once on load
-});
+window.addEventListener("scroll",()=>{
+
+items.forEach(item=>{
+
+const top=item.getBoundingClientRect().top
+
+if(top < window.innerHeight-100){
+item.classList.add("show")
+}
+
+})
+
+})
+
 </script>
 
-
-
-
-
-
-
-
+</body>
+</html>
 
 
 
@@ -696,6 +765,114 @@ started = true;
 });
 
 </script>
+
+
+
+
+
+
+
+
+
+<section class="products-panels">
+
+<h2 class="products-title">Our Products Gallery</h2>
+
+<div class="panel-container">
+
+<div class="panel reveal">
+<img src="https://images.unsplash.com/photo-1497366216548-37526070297c">
+<div class="panel-info">
+<h3>Sleek Series</h3>
+<p>Elegant glass partition systems for modern offices.</p>
+<a href="#">View Product</a>
+</div>
+</div>
+
+<div class="panel reveal">
+<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2">
+<div class="panel-info">
+<h3>Eco Series - 45</h3>
+<p>Cost-efficient modular partitions for flexible workspaces.</p>
+<a href="#">View Product</a>
+</div>
+</div>
+
+<div class="panel reveal">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<div class="panel-info">
+<h3>Ultra Series - 75</h3>
+<p>Acoustic partition system for privacy and performance.</p>
+<a href="#">View Product</a>
+</div>
+</div>
+
+<div class="panel reveal">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
+<div class="panel-info">
+<h3>Neon Series - 100</h3>
+<p>Heavy-duty partitions for large corporate offices.</p>
+<a href="#">View Product</a>
+</div>
+</div>
+
+<div class="panel reveal">
+<img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36">
+<div class="panel-info">
+<h3>Style Door</h3>
+<p>Stylish doors designed for glass partition systems.</p>
+<a href="#">View Product</a>
+</div>
+</div>
+
+<div class="panel reveal">
+<img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f">
+<div class="panel-info">
+<h3>Technical Panel</h3>
+<p>Advanced panels engineered for modern workspaces.</p>
+<a href="#">View Product</a>
+</div>
+</div>
+
+<div class="panel reveal">
+<img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58">
+<div class="panel-info">
+<h3>Architectural Hardware</h3>
+<p>Premium fittings for glass partition installations.</p>
+<a href="#">View Product</a>
+</div>
+</div>
+
+<div class="panel reveal">
+<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+<div class="panel-info">
+<h3>Accessories</h3>
+<p>Essential accessories for modular partition systems.</p>
+<a href="#">View Product</a>
+</div>
+</div>
+
+</div>
+</section>
+<script>
+    const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach(el=>{
+    const pos = el.getBoundingClientRect().top;
+    if(pos < window.innerHeight - 100){
+      el.classList.add("active");
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
 
 
 

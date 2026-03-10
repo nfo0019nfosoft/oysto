@@ -356,6 +356,13 @@ color:#057fcc;
 margin-bottom:25px;
 }
 
+.contact-card p{
+font-size:15px;
+line-height:1.6;
+color:black;
+margin:0;
+}
+
 /* INFO ITEMS */
 
 .info{
