@@ -363,14 +363,16 @@ font-size:36px;
 }
 
 .glass-bg-text {
-    position: absolute;
-    top: 60px;
-    left: 40px;
-    font-size: 160px;
+     position: fixed;
+    top: 50%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    font-size: 14vw;
     font-weight: 900;
-    color: rgba(0,0,0,0.02);
-    z-index: 0;
-    pointer-events: none;
+    color: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+    letter-spacing: -5px;
+    user-select: none;
 }
 
 .sleek-wrapper {

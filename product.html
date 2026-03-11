@@ -5,7 +5,7 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Products | Oysto</title>
+<title>Products | Oysto PARTITIONS</title>
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -151,7 +151,7 @@ navbar.classList.remove("navbar-scrolled");
 <div class="hero-overlay"></div>
 
 <div class="hero-text">
-<h1>Our Products</h1>
+<h1>OUR PRODUCTS</h1>
 <p>Premium Office Partition Solutions</p>
 </div>
 
@@ -162,9 +162,132 @@ navbar.classList.remove("navbar-scrolled");
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="why-oysto">
+
+<div class="why-container">
+
+<h2 class="why-title">Why Choose Oysto Partitions</h2>
+
+<div class="why-grid">
+
+<div class="why-card reveal2">
+<i class="fa-solid fa-layer-group"></i>
+<h3>Modular Systems</h3>
+<p>Flexible partition systems designed for modern workspaces.</p>
+</div>
+
+<div class="why-card reveal2">
+<i class="fa-solid fa-window-maximize"></i>
+<h3>Elegant Glass Design</h3>
+<p>Frameless glass partitions that enhance workspace aesthetics.</p>
+</div>
+
+<div class="why-card reveal2">
+<i class="fa-solid fa-volume-high"></i>
+<h3>Acoustic Comfort</h3>
+<p>Engineered glass systems that reduce noise and improve privacy.</p>
+</div>
+
+<div class="why-card reveal2">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+<h3>Easy Installation</h3>
+<p>Quick installation with minimal disruption to office operations.</p>
+</div>
+
+<div class="why-card reveal2">
+<i class="fa-solid fa-building"></i>
+<h3>Architectural Quality</h3>
+<p>Premium aluminum profiles and glass systems for durability.</p>
+</div>
+
+<div class="why-card reveal2">
+<i class="fa-solid fa-lightbulb"></i>
+<h3>Modern Workspaces</h3>
+<p>Creating stylish and functional office environments.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+/* SCROLL ANIMATION */
+
+const revealCards = document.querySelectorAll(".reveal2");
+
+window.addEventListener("scroll", () => {
+
+revealCards.forEach(card => {
+
+const pos = card.getBoundingClientRect().top;
+
+if(pos < window.innerHeight - 100){
+card.classList.add("active2");
+}
+
+});
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section class="products-section">
 
-<h2 class="products-title">Our Product Range</h2>
+<div class="glass-icons-bg">
+
+<i class="fa-solid fa-window-maximize"></i>
+<i class="fa-solid fa-border-all"></i>
+<i class="fa-solid fa-table-columns"></i>
+<i class="fa-solid fa-vector-square"></i>
+<i class="fa-solid fa-layer-group"></i>
+
+</div>
+<h2 class="products-title">OUR PRODUCT RANGE</h2>
 
 <div class="products-grid">
 
@@ -317,3 +440,88 @@ el.classList.add("active");
 });
 </script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="applications-section">
+
+<div class="applications-container">
+
+<h2 class="applications-title">Where Our Partitions Are Used</h2>
+
+<div class="applications-grid">
+
+<div class="app-card reveal4">
+<i class="fa-solid fa-building"></i>
+<h3>Corporate Offices</h3>
+<p>Modern glass partitions for stylish office interiors.</p>
+</div>
+
+<div class="app-card reveal4">
+<i class="fa-solid fa-people-group"></i>
+<h3>Meeting Rooms</h3>
+<p>Transparent meeting rooms with acoustic comfort.</p>
+</div>
+
+<div class="app-card reveal4">
+<i class="fa-solid fa-hospital"></i>
+<h3>Hospitals</h3>
+<p>Clean and durable partitions for healthcare spaces.</p>
+</div>
+
+<div class="app-card reveal4">
+<i class="fa-solid fa-store"></i>
+<h3>Commercial Spaces</h3>
+<p>Glass systems for malls and commercial interiors.</p>
+</div>
+
+<div class="app-card reveal4">
+<i class="fa-solid fa-couch"></i>
+<h3>Showrooms</h3>
+<p>Elegant glass partitions for product display areas.</p>
+</div>
+
+<div class="app-card reveal4">
+<i class="fa-solid fa-briefcase"></i>
+<h3>Executive Cabins</h3>
+<p>Premium partitions for private office cabins.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+const appCards = document.querySelectorAll(".reveal4");
+
+window.addEventListener("scroll", () => {
+
+appCards.forEach(card => {
+
+const pos = card.getBoundingClientRect().top;
+
+if(pos < window.innerHeight - 100){
+card.classList.add("active4");
+}
+
+});
+
+});
+
+</script>

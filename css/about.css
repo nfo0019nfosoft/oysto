@@ -539,7 +539,7 @@ text-align:center;
 /* HEADING */
 
 .abou-heading h2{
-font-size:38px;
+font-size:32px;
 color:#057fcc;
 text-transform:uppercase;
 margin-bottom:16px;
@@ -620,9 +620,10 @@ margin:auto;
 /* TITLE */
 
 .values-title h2{
-font-size:38px;
+font-size:32px;
 margin-bottom:10px;
 color:#057fcc;
+text-transform: uppercase;
 }
 
 .values-title p{
@@ -770,8 +771,9 @@ margin:auto;
 /* HEADING */
 
 .exp-heading h2{
-font-size:38px;
+font-size:32px;
 margin-bottom:10px;
+text-transform: uppercase;
 color:#057fcc;
 }
 

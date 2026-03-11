@@ -315,13 +315,13 @@ z-index:2;
 }
 
 .hero-text h1{
-font-size:60px;
+font-size:50px;
 
 }
 
 .hero-text p{
 margin-top:10px;
-font-size:18px;
+font-size:15px;
 }
 
 
@@ -366,8 +366,8 @@ font-size:36px;
 
 
 .products-section{
-padding:80px 8%;
-background:#f4f8ff;
+padding:50px 8%;
+background:white;
 text-align:center;
 }
 
@@ -538,6 +538,102 @@ grid-template-columns:1fr;
 
 
 
+/* animated glass icons background */
+
+.products-section{
+padding:50px 5%;
+
+text-align:center;
+overflow:hidden;
+position:relative;
+}
+
+/* background container */
+
+.glass-icons-bg{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:0;
+
+}
+
+/* icons */
+
+.glass-icons-bg i{
+
+position:absolute;
+
+font-size:60px;
+filter: blur(0.4px);
+
+color:rgba(5,127,204,0.2);
+
+animation:floatUp 5s linear infinite;
+
+}
+
+/* positions (middle nunchi start) */
+
+.glass-icons-bg i:nth-child(1){
+left:10%;
+top:25%;
+animation-delay:0s;
+}
+
+.glass-icons-bg i:nth-child(2){
+left:25%;
+top:25%;
+animation-delay:2s;
+}
+
+.glass-icons-bg i:nth-child(3){
+left:50%;
+top:30%;
+animation-delay:4s;
+}
+
+.glass-icons-bg i:nth-child(4){
+left:70%;
+top:25%;
+animation-delay:6s;
+}
+
+.glass-icons-bg i:nth-child(5){
+left:85%;
+top:25%;
+animation-delay:8s;
+}
+
+/* animation */
+
+@keyframes floatUp{
+
+0%{
+transform:translateY(0);
+opacity:0;
+}
+
+30%{
+opacity:0.5;
+}
+
+100%{
+transform:translateY(-450px);
+opacity:0;
+}
+
+}
+
+/* keep content above */
+
+.products-container{
+position:relative;
+z-index:2;
+}
 
 
 
@@ -552,3 +648,362 @@ grid-template-columns:1fr;
 
 
 
+
+
+
+
+
+
+
+
+
+/* WHY OYSTO SECTION */
+
+/* WHY OYSTO SECTION */
+
+.why-oysto{
+padding:50px 5%;
+background:#eef6fb;
+text-align:center;
+}
+
+.why-container{
+max-width:1200px;
+margin:auto;
+}
+
+.why-title{
+font-size:36px;
+color:#057fcc;
+margin-bottom:60px;
+text-transform:uppercase;
+}
+
+/* GRID */
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+/* CARD */
+
+.why-card{
+background:#eef6fb;
+padding:40px 25px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+transition:0.4s;
+
+opacity:0;
+transform:translateY(40px);
+
+position:relative;
+overflow:hidden;
+}
+
+/* ICON */
+
+.why-card i{
+
+font-size:40px;
+
+color:#057fcc;
+
+margin-bottom:15px;
+
+/* floating animation */
+
+animation:iconFloat 3s ease-in-out infinite;
+
+}
+
+/* ICON FLOAT */
+
+@keyframes iconFloat{
+
+0%{transform:translateY(0);}
+
+50%{transform:translateY(-8px);}
+
+100%{transform:translateY(0);}
+
+}
+
+/* TEXT */
+
+.why-card h3{
+font-size:20px;
+margin-bottom:10px;
+}
+
+.why-card p{
+font-size:14px;
+color:#555;
+line-height:1.6;
+}
+
+/* HOVER EFFECT */
+
+.why-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 20px 45px rgba(0,0,0,0.18);
+
+}
+
+/* ICON HOVER */
+
+.why-card:hover i{
+
+transform:rotate(10deg) scale(1.3);
+
+color:#034e8a;
+
+}
+
+/* SPECIAL HOVER LINE */
+
+.why-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:0;
+
+height:4px;
+
+background:#057fcc;
+
+transition:0.4s;
+
+}
+
+.why-card:hover::before{
+width:100%;
+}
+
+/* SCROLL ANIMATION */
+
+.active2{
+opacity:1;
+transform:translateY(0);
+}
+
+/* TABLET */
+
+@media(max-width:992px){
+
+.why-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.why-grid{
+grid-template-columns:1fr;
+}
+
+.why-title{
+font-size:28px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* APPLICATION SECTION */
+
+.applications-section{
+
+padding:80px 5%;
+
+background:#eef6fb;
+
+text-align:center;
+
+}
+
+.applications-container{
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+.applications-title{
+
+font-size:36px;
+
+color:#057fcc;
+
+margin-bottom:60px;
+
+text-transform:uppercase;
+
+}
+
+/* GRID */
+
+.applications-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
+
+/* CARD */
+
+.app-card{
+
+background:white;
+
+padding:40px 25px;
+
+border-radius:12px;
+
+border-left:4px solid #057fcc;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+transition:0.4s;
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+.app-card{
+
+border-left:5px solid;
+
+border-image:linear-gradient(
+to bottom,
+#057fcc,
+#0fb9ff
+) 1;
+
+}
+
+/* ICON */
+
+.app-card i{
+
+font-size:40px;
+
+color:#057fcc;
+
+margin-bottom:15px;
+
+animation:floatIcon 3s ease-in-out infinite;
+
+}
+
+/* ICON FLOAT */
+
+@keyframes floatIcon{
+
+0%{transform:translateY(0);}
+
+50%{transform:translateY(-8px);}
+
+100%{transform:translateY(0);}
+
+}
+
+/* TEXT */
+
+.app-card h3{
+
+font-size:20px;
+
+margin-bottom:10px;
+
+}
+
+.app-card p{
+
+font-size:14px;
+
+color:#555;
+
+line-height:1.6;
+
+}
+
+/* HOVER */
+
+.app-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 20px 45px rgba(0,0,0,0.18);
+
+}
+
+/* SCROLL ANIMATION */
+
+.active4{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* TABLET */
+
+@media(max-width:992px){
+
+.applications-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.applications-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.applications-title{
+
+font-size:28px;
+
+}
+
+}
