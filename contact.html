@@ -217,15 +217,15 @@ sales@oystopartitions.com
 
 <h2>Request Quote</h2>
 
-<form>
+<form id="quoteForm">
 
-<input type="text" placeholder="Your Name">
+<input type="text" id="name" placeholder="Your Name" required>
 
-<input type="email" placeholder="Email Address">
+<input type="email" id="email" placeholder="Email Address" required>
 
-<input type="tel" placeholder="Phone Number">
+<input type="tel" id="phone" placeholder="Phone Number" required>
 
-<textarea placeholder="Your Message"></textarea>
+<textarea id="message" placeholder="Your Message"></textarea>
 
 <button type="submit">
 <i class="fa-solid fa-rocket"></i> Send Inquiry
@@ -264,7 +264,31 @@ window.addEventListener("scroll", revealCards);
 
 
 
+<script>
+    document.getElementById("quoteForm").addEventListener("submit", function(e){
 
+e.preventDefault();
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let phone = document.getElementById("phone").value;
+let message = document.getElementById("message").value;
+
+let whatsappMessage =
+`New Inquiry from Website
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+
+Message:${message}`;
+
+let url = "https://wa.me/919177267680?text=" + encodeURIComponent(whatsappMessage);
+
+window.open(url, "_blank");
+
+});
+</script>
 
 
 
