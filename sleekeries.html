@@ -195,14 +195,12 @@ navbar.classList.remove("navbar-scrolled");
                     <span class="card-title">Partition height</span>
                     <span class="card-value">Upto 3000mm</span>
                 </div>
+                 <div class="info-card">
+                    <span class="card-title">Curve Profile</span>
+                    <span class="card-value">Available</span>
+                </div>
             </div>
 
-            <div class="action-area">
-                <a href="#" class="btn-premium">
-                    <span>Request Quote</span>
-                    <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-                </a>
-            </div>
         </div>
 
         <div class="image-panel reveal-right">
@@ -216,6 +214,7 @@ navbar.classList.remove("navbar-scrolled");
                     <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2" alt="Detail 1" class="zoom-img">
                        <div class="zoom-tag">Click to expand</div>
                 </div>
+                
                 <div class="small-frame expand-trigger">
                     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72" alt="Detail 2" class="zoom-img">
                        <div class="zoom-tag">Click to expand</div>
@@ -274,9 +273,7 @@ navbar.classList.remove("navbar-scrolled");
 
 
 
-
-
-<section class="engineering">
+<section class="engineering"> 
 <div class="eng-container">
 
 <h2 class="engineering-title">Engineering Highlights</h2>
@@ -287,8 +284,8 @@ navbar.classList.remove("navbar-scrolled");
 <div class="eng-icon">
 <i class="fa-solid fa-layer-group"></i>
 </div>
-<h3>Minimal Profile</h3>
-<p>Ultra slim 25mm x 25mm aluminum profile creating a seamless glass partition.</p>
+<h3>Minimal Aluminum </h3>
+<p>25mm × 25mm slim aluminum profile for seamless glass partitions.</p>
 </div>
 
 <div class="eng-item reveal">
@@ -296,14 +293,14 @@ navbar.classList.remove("navbar-scrolled");
 <i class="fa-solid fa-ruler-combined"></i>
 </div>
 <h3>Glass Compatibility</h3>
-<p>Supports 10mm, 12mm and laminated glass configurations.</p>
+<p>Supports 10mm, 12mm and 11.5mm laminated glass.</p>
 </div>
 
 <div class="eng-item reveal">
 <div class="eng-icon">
 <i class="fa-solid fa-volume-high"></i>
 </div>
-<h3>Acoustic Control</h3>
+<h3>Acoustic Insulation</h3>
 <p>Provides sound insulation performance up to 32 dB.</p>
 </div>
 
@@ -312,15 +309,15 @@ navbar.classList.remove("navbar-scrolled");
 <i class="fa-solid fa-building"></i>
 </div>
 <h3>High Partitions</h3>
-<p>Supports partition heights up to 3000mm.</p>
+<p>Supports glass partition heights up to 3000 mm.</p>
 </div>
 
 <div class="eng-item reveal">
 <div class="eng-icon">
 <i class="fa-solid fa-circle-nodes"></i>
 </div>
-<h3>Curve Profiles</h3>
-<p>Special curved profiles available for advanced layouts.</p>
+<h3>Lightweight System</h3>
+<p>Lightweight recyclable system with easy clip-on installation.</p>
 </div>
 
 </div>
@@ -345,3 +342,58 @@ el.classList.add("active");
 
 });
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="cta-section">
+
+<div class="cta-container">
+
+<h2>Request a Quote</h2>
+
+<p>
+Looking for modern glass partition solutions for your office or commercial
+space? Get in touch with our experts today and receive a customized quote.
+</p>
+
+<a href="contact.html" class="cta-btn">
+<i class="fa-solid fa-paper-plane"></i> Get a Quote
+</a>
+
+</div>
+
+</section>
+
+
+<script>
+
+const cta = document.querySelector(".cta-section");
+
+window.addEventListener("scroll", () => {
+
+const top = cta.getBoundingClientRect().top;
+
+if(top < window.innerHeight - 100){
+cta.classList.add("cta-show");
+}
+
+});
+
+</script>
+
+
+
+
+
+
+
+
