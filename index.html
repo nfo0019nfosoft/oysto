@@ -975,8 +975,14 @@ Submit & Download
 
 </form>
 
-</div>
+<a href="https://1drv.ms/b/c/f35275027a7cfbe2/IQBaeB2RaNG6TbaCjHrV_pZcAT7qyLCMTe6slSTfnxz-pi8"
+   id="downloadFile"
+   class="download-file-btn"
+   download>
+<i class="fa-solid fa-file-arrow-down"></i> Download File
+</a>
 
+</div>
 </div>
 
 
@@ -1019,23 +1025,18 @@ submitBtn.innerText = "Processing...";
 submitBtn.disabled = true;
 
 emailjs.sendForm('service_7ii1es7','template_6pha2tw',this)
-
 .then(function(){
 
-window.open(
-"https://drive.google.com/file/d/1hLOK4dCf85PmkswSESk-MDaJ0IzDEaZu/view",
-"_blank"
-);
+document.getElementById("downloadFile").style.display = "inline-block";
 
-alert("Thank you! Your download has started.");
-
-form.reset();
-modal.style.display = "none";
+alert("Details submitted successfully. Click Download File.");
 
 submitBtn.innerText = "Submit & Download";
 submitBtn.disabled = false;
 
 })
+
+
 
 .catch(function(){
 
