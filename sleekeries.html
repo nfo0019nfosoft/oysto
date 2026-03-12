@@ -96,15 +96,21 @@ navLinks.classList.toggle("active");
 });
 
 /* MOBILE DROPDOWN */
-
 const dropdown = document.querySelector(".dropdown > a");
 const dropdownMenu = document.querySelector(".dropdown-menu");
 
 dropdown.addEventListener("click", function(e){
 
 if(window.innerWidth <= 768){
+
+// first click → dropdown open
+if(!dropdownMenu.classList.contains("show")){
 e.preventDefault();
-dropdownMenu.classList.toggle("show");
+dropdownMenu.classList.add("show");
+}
+
+// second click → open product page
+
 }
 
 });

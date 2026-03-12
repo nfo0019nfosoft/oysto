@@ -112,10 +112,7 @@ transition:0.35s;
 
 /* IMAGE BACKGROUND */
 
-background:
-linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
-url("https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg");
-
+background:#282829;
 background-size:contain;
 background-position:center;
 background-repeat:no-repeat;
@@ -135,7 +132,7 @@ pointer-events:auto;
 .dropdown-item {
     display: block;
     text-decoration: none;
-    color: black !important; /* Force black initially */
+    color: white !important; /* Force black initially */
     font-size: 16px;
     padding: 10px 15px;
     border-radius: 6px;

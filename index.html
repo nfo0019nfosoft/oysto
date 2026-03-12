@@ -96,15 +96,21 @@ navLinks.classList.toggle("active");
 });
 
 /* MOBILE DROPDOWN */
-
 const dropdown = document.querySelector(".dropdown > a");
 const dropdownMenu = document.querySelector(".dropdown-menu");
 
 dropdown.addEventListener("click", function(e){
 
 if(window.innerWidth <= 768){
+
+// first click → dropdown open
+if(!dropdownMenu.classList.contains("show")){
 e.preventDefault();
-dropdownMenu.classList.toggle("show");
+dropdownMenu.classList.add("show");
+}
+
+// second click → open product page
+
 }
 
 });
@@ -921,45 +927,152 @@ window.addEventListener("scroll", () => {
 
 
 
+<section class="brochure-section">
 
+<div class="brochure-container">
 
-
-
-<section class="cta-section">
-
-<div class="cta-container">
-
-<h2>Request a Quote</h2>
+<h2>Download Our Brochure</h2>
 
 <p>
-Looking for modern glass partition solutions for your office or commercial
-space? Get in touch with our experts today and receive a customized quote.
+Explore our premium glass partition solutions.
+Discover modern designs for offices and workspaces.
+Learn about features, materials, and specifications.
+Download the brochure to view our complete range.
 </p>
 
-<a href="contact.html" class="cta-btn">
-<i class="fa-solid fa-paper-plane"></i> Get a Quote
-</a>
+<button id="openModal" class="download-btn">
+<i class="fa-solid fa-download"></i> Download Brochure
+</button>
 
 </div>
 
 </section>
 
 
+<!-- Modal -->
+
+<div id="contactModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close-btn">&times;</span>
+
+<h3>Fill Your Details</h3>
+
+<p>After submitting your details, the brochure will start downloading.</p>
+
+<form id="downloadForm">
+
+<input type="text" name="user_name" placeholder="Your Name" required>
+
+<input type="email" name="user_email" placeholder="Your Email" required>
+
+<input type="tel" name="user_phone" placeholder="Phone Number" required>
+
+<button type="submit" id="submitBtn" class="submit-btn">
+Submit & Download
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<!-- EMAILJS SCRIPT (IMPORTANT) -->
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 <script>
 
-const cta = document.querySelector(".cta-section");
+(function(){
+emailjs.init("GSnWoC503IEMXYQ3e");
+})();
 
-window.addEventListener("scroll", () => {
+const modal = document.getElementById("contactModal");
+const btn = document.getElementById("openModal");
+const closeBtn = document.querySelector(".close-btn");
+const form = document.getElementById("downloadForm");
 
-const top = cta.getBoundingClientRect().top;
-
-if(top < window.innerHeight - 100){
-cta.classList.add("cta-show");
+btn.onclick = function(){
+modal.style.display = "flex";
 }
+
+closeBtn.onclick = function(){
+modal.style.display = "none";
+}
+
+window.onclick = function(event){
+if(event.target == modal){
+modal.style.display = "none";
+}
+}
+
+form.onsubmit = function(e){
+
+e.preventDefault();
+
+const submitBtn = document.getElementById("submitBtn");
+
+submitBtn.innerText = "Processing...";
+submitBtn.disabled = true;
+
+emailjs.sendForm('service_7ii1es7','template_6pha2tw',this)
+
+.then(function(){
+
+window.open(
+"https://drive.google.com/file/d/1hLOK4dCf85PmkswSESk-MDaJ0IzDEaZu/view",
+"_blank"
+);
+
+alert("Thank you! Your download has started.");
+
+form.reset();
+modal.style.display = "none";
+
+submitBtn.innerText = "Submit & Download";
+submitBtn.disabled = false;
+
+})
+
+.catch(function(){
+
+alert("Failed to send. Please try again.");
+submitBtn.disabled = false;
 
 });
 
+};
+
 </script>
+
+
+
+
+
+
+<script>
+  /* SCROLL ANIMATION */
+
+const brochureSection = document.querySelector(".brochure-section");
+
+window.addEventListener("scroll", () => {
+
+const sectionTop = brochureSection.getBoundingClientRect().top;
+
+if(sectionTop < window.innerHeight - 100){
+
+brochureSection.classList.add("brochure-show");
+
+}
+
+});
+</script>
+
+
+
 
 
 
@@ -1024,7 +1137,7 @@ for modern workplaces.
 <ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="about.html">About Us</a></li>
-<li><a href="products.html">Products</a></li>
+<li><a href="product.html">Products</a></li>
 <li><a href="contact.html">Contact Us</a></li>
 </ul>
 
@@ -1064,11 +1177,18 @@ info@oystopartitions.com<br>
 Sales@oystopartitions.com
 </div>
 </div>
-
 <div class="social">
+<a href="https://www.facebook.com/" target="_blank">
 <i class="fa-brands fa-facebook-f"></i>
+</a>
+
+<a href="https://www.instagram.com/" target="_blank">
 <i class="fa-brands fa-instagram"></i>
+</a>
+
+<a href="https://www.youtube.com/" target="_blank">
 <i class="fa-brands fa-youtube"></i>
+</a>
 </div>
 
 </div>
@@ -1079,7 +1199,7 @@ Sales@oystopartitions.com
 
 <p>
 © 2026 Oysto Partitions. All Rights Reserved |
-Designed by Developed by
+Designed and Developed by
 <a href="https://nfosoft.com" target="_blank">nfosoft Innovations</a>
 </p>
 
