@@ -585,8 +585,13 @@ font-size:15px;
 
 
 
+
+
+
+
+
 .footer{
-background:#057fcc;
+background:#282829;
 color:white;
 
 font-family:Arial;
@@ -609,6 +614,7 @@ margin-bottom:15px;
 
 .footer-box h2{
 margin-bottom:20px;
+text-transform: uppercase;
 font-size:20px;
 }
 
@@ -637,20 +643,62 @@ line-height:1.6;
 margin-right:8px;
 font-size: 14px;
 }
-
-.social{
-margin-top:10px;
+.address-row{
+display:flex;
+align-items:flex-start;
+gap:10px;
 }
 
+.address-row i{
+font-size:16px;
+margin-top:4px;
+}
+
+.address-text{
+line-height:1.6;
+}
+.contact-row{
+display:flex;
+align-items:center;
+gap:10px;
+margin-top:12px;
+}
+
+.contact-text{
+line-height:1.6;
+}
+
+.contact-row i{
+font-size:16px;
+margin-top:2px;
+}
+
+
+.social{
+margin-top:20px;
+display:flex;
+align-items:center;
+gap:6px;   /* icons madhya space */
+}
 .social i{
+width:42px;
+height:42px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
 font-size:18px;
-margin-right:10px;
+
 background:white;
-color:#057fcc;
-padding:10px;
+color:#282829;
+
 border-radius:50%;
+
+margin-right:10px;
+
 cursor:pointer;
-transition:0.3s;
+transition:.3s;
 }
 
 .social i:hover{
@@ -668,7 +716,7 @@ width:100%;
 }
 
 .footer-bottom a{
-color:white;
+color:#057fcc;
 font-weight:600;
 text-decoration:none;
 }
@@ -707,6 +755,10 @@ transform:translateX(0);
 }
 
 
+.social a{
+text-decoration: none;
+}
+
 /* tablet */
 
 @media (max-width:900px){
@@ -724,7 +776,7 @@ grid-template-columns:1fr 1fr;
 
 .footer-container{
 grid-template-columns:1fr;
-text-align:center;
+text-align:left;
 }
 
 .footer-logo{
@@ -734,5 +786,102 @@ margin:auto;
 .social i{
 margin:8px;
 }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* WhatsApp Button */
+
+.float-whatsapp{
+position:fixed;
+bottom:95px;
+right:20px;
+text-decoration: none;
+width:55px;
+height:55px;
+
+background:#25D366;
+color:white;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:26px;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+z-index:999;
+
+animation:whatsappPulse 2s infinite;
+}
+
+/* Phone Button */
+
+.float-phone{
+position:fixed;
+bottom:20px;
+right:20px;
+text-decoration: none;
+width:55px;
+height:55px;
+
+background:#057fcc;
+color:white;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:22px;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+z-index:999;
+
+animation:phonePulse 2s infinite;
+}
+
+/* Hover */
+
+.float-whatsapp:hover,
+.float-phone:hover{
+transform:scale(1.1);
+}
+
+/* Animations */
+
+@keyframes whatsappPulse{
+
+0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}
+
+70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}
+
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+
+}
+
+@keyframes phonePulse{
+
+0%{box-shadow:0 0 0 0 rgba(5,127,204,.6)}
+
+70%{box-shadow:0 0 0 15px rgba(5,127,204,0)}
+
+100%{box-shadow:0 0 0 0 rgba(5,127,204,0)}
 
 }
