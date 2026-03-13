@@ -517,6 +517,11 @@ margin:auto;
 
 
 
+
+
+
+
+
 .abou-section{
 padding:40px 5%;
 text-align:center;
@@ -591,9 +596,13 @@ font-size:15px;
 }
 
 }
+.about-container.reverse .about-content h2{
+margin-top:60px;
+}
 
-
-
+.about-container.reverse .about-image{
+margin-top:40px;
+}
 
 
 

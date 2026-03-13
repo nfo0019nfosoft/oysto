@@ -385,7 +385,7 @@ margin:auto;
 /* LEFT SIDE: CONTENT */
 .content-panel .title { font-size: 48px; color: var(--dark); margin-bottom: 25px; line-height: 1.1; }
 .content-panel .thin { font-weight: 300; }
-.content-panel .description { font-size: 16px; color: #555; line-height: 1.8; margin-bottom: 35px; }
+.content-panel .description { font-size: 16px; color: #555; line-height: 1.8; margin-bottom: 35px; text-align: justify;}
 
 .card-grid {
     display: grid;
@@ -470,7 +470,7 @@ margin:auto;
 .expand-trigger:hover .zoom-tag {
     opacity: 1;
 }
-/* Button position fix */
+/* Button position fix h*/
 .action-area {
     margin-left: 10px; /* Chinna images ki button ki madhya gap */
 }
