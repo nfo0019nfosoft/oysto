@@ -817,7 +817,7 @@ padding:40px 5%;
 
 background:
 linear-gradient(rgba(40,40,41,0.85), rgba(40,40,41,0.85)),
-url("https://images.unsplash.com/photo-1497366754035-f200968a6e72");
+url("../images/highbg.png") ;
 
 background-size:cover;
 background-position:center;
@@ -1353,7 +1353,7 @@ transform:translateY(0);
 padding:80px 5%;
 position:relative;
 
-background:url("https://images.unsplash.com/photo-1497366754035-f200968a6e72") center/cover no-repeat;
+background: url("../images/highbg.png")  center/cover no-repeat;
 
 text-align:center;
 color:white;

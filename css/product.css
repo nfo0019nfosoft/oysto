@@ -286,8 +286,8 @@ pointer-events:auto;
 
 .products-hero{
 height:60vh;
-background:url("https://images.unsplash.com/photo-1497366811353-6870744d04b2")
-center/cover no-repeat;
+background: url("../images/productbg.png")  center/cover no-repeat;
+
 
 display:flex;
 align-items:center;
